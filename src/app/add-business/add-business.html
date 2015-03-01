@@ -1,0 +1,25 @@
+<md-content>
+  <h1>Add your business</h1>
+  <div>
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Action</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="b in businesses">
+          <td>{{ b.name }}</td>
+          <td>{{ b.id }}</td>
+          <td><button ng-click="deleteBusiness(b)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <form>
+      <input type="text" ng-model="business.name">
+      <button ng-click="addBusiness()">Add</button>
+    </form>
+  </div>
+</md-content>

@@ -1,22 +1,25 @@
 <md-content>
   <h1>Add your business</h1>
-  <form name="userForm">
-  <md-input-container>
-    <label>Last Name</label>
-    <input name="lastName" ng-model="lastName" required md-maxlength="10" minlength="4">
-    <div ng-messages="userForm.lastName.$error" ng-show="userForm.bio.$dirty">
-      <div ng-message="required">This is required!</div>
-      <div ng-message="md-maxlength">That's too long!</div>
-      <div ng-message="minlength">That's too short!</div>
-    </div>
-  </md-input-container>
-  <md-input-container>
-    <label>Biography</label>
-    <textarea name="bio" ng-model="biography" required md-maxlength="150"></textarea>
-    <div ng-messages="userForm.bio.$error" ng-show="userForm.bio.$dirty">
-      <div ng-message="required">This is required!</div>
-      <div ng-message="md-maxlength">That's too long!</div>
-    </div>
-  </md-input-container>
-</form>
+  <div>
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Action</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="b in businesses">
+          <td>{{ b.name }}</td>
+          <td>{{ b.id }}</td>
+          <td><button ng-click="deleteBusiness(b)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <form>
+      <input type="text" ng-model="business.name">
+      <button ng-click="addBusiness()">Add</button>
+    </form>
+  </div>
 </md-content>

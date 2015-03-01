@@ -1,11 +1,47 @@
-<div layout="vertical" layout-fill class="homepage center">
-  <h1>Off Site Adventures</h1>
-  <md-content class="md-padding">
-    <p>Quickly find new locations to hold team building events</p>
-    <p>Along with Catering, Photographers, Transportation</p>
-    <p>All in one spot</p>
-  </md-content>
-  <md-input-container class="homepage-search">
-    <input type="text" ng-model="search" placeholder="City, Zipcode or Company Name">
-  </md-input-container>
+<div layout="vertical" layout-fill class="homepage-container">
+  <div class="homepage center">
+    <h1>Off-Site Adventures</h1>
+    <md-content class="md-padding">
+      <p>Quickly find new locations to hold team building events</p>
+      <p>Along with Catering, Photographers, Transportation</p>
+      <p>All in one spot</p>
+    </md-content>
+    <div class="homepage-search">
+      <md-input-container>
+        <input type="text" ng-model="search" placeholder="City, Zipcode or Company Name">
+      </md-input-container>
+    </div>
+  </div>
+  <div class="description">
+    <h2 class="center">Its Simple</h2>
+    <div layout="row" layout-align="space-around center">
+      <div class="steps">
+        <h3>Search</h3>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"</p>
+      </div>
+      <div class="steps">
+        <h3>Find</h3>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+      </div>
+      <div class="steps">
+        <h3>Enjoy</h3>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+      </div>
+    </div>
+  </div>
+  <div class="contact-us">
+    <h2>Contact Us</h2>
+    <p>Any questions please feel free to contact us</p>
+    <form name="contact">
+      <md-input-container>
+        <input type="text" name="name" placeholder="Name"/>
+      </md-input-container>
+      <md-input-container>
+        <input type="email" name="email" placeholder="Email"/>
+      </md-input-container>
+      <md-input-container>
+        <textarea rows="8" cols="115" name="message" placeholder="Message"></textarea>
+      </md-input-container>
+    </form>
+  </div>
 </div>

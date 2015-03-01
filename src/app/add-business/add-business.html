@@ -17,9 +17,27 @@
     </table>
   </div>
   <div>
-    <form>
-      <input type="text" ng-model="business.name">
-      <button ng-click="addBusiness()">Add</button>
+    <form novalidate class="css-form">
+      Company Name:<input type="text" ng-model="business.name" required placeholder="Company Name *"/><br />
+      Company Type:<select ng-change="addType()" ng-model="businessType" ng-options="value for value in businessTypes" requred>
+        <option value='' disabled>- Select/Add Company Type -</option>
+      </select><br>
+      <div>
+        Selected Types:<span ng-repeat="type in business.types">{{ type }} <button ng-click="removeActivity(type)">X</button></span>
+      </div>
+      Capacity: <select ng-model="business.capacity" ng-options="value for value in capacities" required>
+        <option value='' disabled>Select Capactiy</option>
+      </select><br>
+      Contact Person: <input type="text" ng-model="business.contactPerson" required placeholder="Contact Person *"><br>
+      Email: <input type="email" ng-model="business.email"><br>
+      Telephone: <input type="telephone" ng-model="business.telephone"><br>
+      Website: <input type="text" ng-model="business.website"><br>
+      Address: <input type="text" ng-model="business.address.address"><br>
+      City: <input type="text" ng-model="business.address.city">
+      State: <input type="text" ng-model="business.address.state">
+      Zip Code: <input type="text" ng-model="business.address.zipCode"><br>
+      <textarea ng-model="business.about" placeholder="Tell us about your company..."></textarea><br>
+      <input type="submit" ng-click="addBusiness()" value="Create" />
     </form>
   </div>
 </md-content>

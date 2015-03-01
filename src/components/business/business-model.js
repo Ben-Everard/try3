@@ -15,7 +15,12 @@
         var Business = {
             all: businesses,
             create: function (business) {
-                business.id = businesses.length + 1;
+                if (businesses.length) {
+                    business.id = businesses[businesses.length - 1].id + 1
+                } else {
+                    business.id = 1;
+                }
+
                 return businesses.$add(business);
             },
             find: function (businessId) {

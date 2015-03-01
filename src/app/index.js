@@ -10,7 +10,8 @@ angular.module('businessify', [
   'ngMaterial',
   'firebase',
   'all.business',
-  'add.business'
+  'add.business',
+  'a.business'
 ])
 .config(function ($routeProvider) {
   $routeProvider
@@ -25,6 +26,10 @@ angular.module('businessify', [
     .when('/business/add', {
       templateUrl: 'app/add-business/add-business.html',
       controller: 'AddBusinessCtrl'
+    })
+    .when('/business/:id', {
+      templateUrl: 'app/a-business/a-business.html',
+      controller: 'ABusinessCtrl'
     })
     .otherwise({
       redirectTo: '/'

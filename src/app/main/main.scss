@@ -1,0 +1,17 @@
+.homepage {
+  background-color: #fef9e5;
+  &.center {
+    text-align: center;
+  }
+  md-content {
+    background-color: #fef9e5;
+  }
+  .homepage-search {
+    margin-bottom: 50px;
+    input {
+      width: 400px;
+      height: 60px;
+      padding-left: 20px;
+    }
+  }
+}

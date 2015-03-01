@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700|Open+Sans+Condensed:400,700,700italic,400italic);
 
 html {
   font-family: 'Roboto Slab', serif;
@@ -23,8 +23,19 @@ html {
   }
 }
 
+header {
+  margin: 0 20px 0 20px;
+}
+
 md-toolbar.md-default-theme {
-  background-color: black;
+  background-color: white;
+  color: black;
+  .buttons {
+    md-button {
+      margin-right: 50px;
+      font-size: 1rem;
+    } 
+  }
 }
 
 section.jumbotron {

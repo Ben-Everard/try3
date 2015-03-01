@@ -1,0 +1,17 @@
+<md-content>
+  <h1>All businesses</h1>
+  <div>
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>ID</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="b in businesses">
+          <td><a href="#/business/{{ b.id }}">{{ b.name }}</a></td>
+          <td>{{ b.id }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</md-content>

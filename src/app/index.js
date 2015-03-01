@@ -17,7 +17,7 @@ angular.module('businessify', [
       controller: 'MainCtrl'
     })
     .when('/business', {
-      templateUrl: 'app/business/buisness.html',
+      templateUrl: 'app/business/business.html',
       controller: 'BusinessCtrl'
     })
     .otherwise({

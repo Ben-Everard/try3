@@ -1,17 +1,64 @@
-.homepage {
-  background-color: #fef9e5;
-  &.center {
+.homepage-container {
+  h1, h2, h3 {
+    text-transform: uppercase;
     text-align: center;
   }
-  md-content {
-    background-color: #fef9e5;
+
+  .homepage {
+    background-image: url('/assets/images/ziplining-homepage.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    &.center {
+      text-align: center;
+    }
+    h1 {
+      color: white;
+    }
+    p {
+      color: white;
+      font-weight: bold;
+      margin: 0 0 5px;
+    }
+    md-content {
+      background: none;
+    }
+    .homepage-search {
+      margin-bottom: 50px;
+      input {
+        width: 400px;
+        height: 60px;
+        padding-left: 20px;
+      }
+    }
   }
-  .homepage-search {
-    margin-bottom: 50px;
-    input {
-      width: 400px;
-      height: 60px;
-      padding-left: 20px;
+
+  .description {
+    text-align: center;
+    background-color: #F5F7F7;
+    padding-bottom: 50px;
+    .steps {
+      border: 1px solid black;
+      padding: 10px;
+      width: 30%
+    }
+  }
+
+  .contact-us {
+    text-align: center;
+    background-color: #EDEFFF;
+    md-input-container {
+      display: block;
+      input,textarea {
+        border: none;
+        border-bottom: 1px solid black;
+        padding-left: 20px;
+        background-color: #EDEFFF;
+      }
+      input {
+        margin-bottom: 30px;
+        width: 75%;
+        height: 60px;
+      }
     }
   }
 }
